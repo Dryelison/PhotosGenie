@@ -10,7 +10,7 @@ has_remote_changes() {
   fi
 }
 
-# Check if there are any changes 
+# Check if there are any changes
 if has_remote_changes; then
   echo "Changes detected, updating..."
 
@@ -22,7 +22,7 @@ if has_remote_changes; then
   yarn build
   cp -rf dist/* ~/w/Genesis/packages/photosgenie/backend/static
 else
-  echo "No changes detected."  
+  echo "No changes detected."
 fi
 
 exit 0
