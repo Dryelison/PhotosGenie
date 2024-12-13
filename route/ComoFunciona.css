@@ -1,0 +1,176 @@
+.information-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.title-information {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+.title-information h2 {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.title-information p {
+  text-align: center;
+  color: #777;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.information-photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.top-photos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+.photo1, .photo2 {
+  width: 48%;
+  text-align: center;
+}
+
+.photo1 img, .photo2 img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.photo1 h3, .photo2 h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.photo1 p, .photo2 p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
+  color: #777;
+  text-align: justify;
+}
+
+.bottom-photo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 1rem;
+  margin-right: 220px;
+}
+
+.bottom-photo .text-content {
+  flex: 1;
+  max-width: 40%;
+  margin-left: 220px;
+  margin-top: 150px;
+}
+
+.bottom-photo img {
+  max-width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.bottom-photo h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.bottom-photo p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
+  color: #777;
+  text-align: justify;
+}
+
+.gerador-de-retratos {
+  margin: 100px auto;
+  align-items: center;
+}
+
+.gerador-text h2 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.gerador-text p {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #777;
+}
+
+.gerador-de-retratos img {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40em;
+  margin-left: 400px;
+  border-radius: 30px;
+}
+
+.gerador-photos {
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .title-information {
+    width: 80%; /* Reduz a largura em telas menores */
+  }
+
+  .title-information h2 {
+    font-size: 2rem;
+  }
+
+  .title-information p {
+    font-size: 1.2rem;
+  }
+
+  .top-photos {
+    flex-direction: column; /* Empilha as fotos em telas pequenas */
+    width: 100%;
+  }
+
+  .photo1, .photo2 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .bottom-photo {
+    flex-direction: column; /* Empilha conteúdo e imagem */
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .bottom-photo img {
+    max-width: 100%;
+  }
+
+  .bottom-photo .text-content {
+    margin-left: 0;
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+
+
+  .gerador-de-retratos img {
+    width: 100%; /* Ajusta para ocupar a largura total da tela */
+    margin-left: 0;
+  }
+}

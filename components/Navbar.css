@@ -1,0 +1,454 @@
+/* Estilo para todo o corpo da página */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+}
+
+/* Ajustes para o header - não utilizado diretamente no exemplo do componente */
+.header-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.header-container h1 {
+    margin: 20px 0;
+    font-size: 50px;
+    flex: none;
+    height: auto;
+    position: relative;
+    width: 100%;
+    font-family: Helvetica;
+}
+
+.header-container p {
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 12px;
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    color: #777;
+}
+
+.header-container button {
+    padding: 15px 30px;
+    font-size: 1em;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.header-container button:hover {
+    background-color: rgba(0, 0, 0, 0.962);
+}
+
+
+/* Estilo para a barra de navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Centraliza os itens da navbar */
+    width: 100%;
+    gap: 20px; /* Espaçamento entre os itens */
+    margin: 0;
+    padding: 0;
+    box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 60px;
+    top: 0;
+    z-index: 9999;
+    background-color: #ffffff;
+}
+
+nav ul li {
+    margin-right: 20px;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+nav ul li img {
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 15rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #777;
+    padding: 10px;
+}
+
+/* Ajustes para os botões na navbar - se necessário incluir no componente */
+nav button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10rem;
+}
+
+nav button:hover {
+    background-color: #000000;
+}
+
+/* Estilo para o contêiner do carrossel */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Efeito de neblina nas bordas */
+.carousel-container::before,
+.carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px; /* Ajuste a largura da neblina */
+    z-index: 2; /* Coloca as sombras acima das imagens */
+    pointer-events: none;
+}
+
+.carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+/* Estilo do carrossel e animação */
+.carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: scroll-infinite 10s linear infinite; /* esse faz a imagem fazer o movimento*/
+}
+
+/* Estilo para cada slide do carrossel */
+.carousel-slide {
+    min-width: 300px; /* Ajuste o tamanho conforme necessário */
+    margin-right: 10px; /* Espaçamento entre os slides */
+  }
+
+.photo-large {
+    position: relative;
+}
+
+.photo-large img {
+    width: 70%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 1 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid white;
+}
+
+.photo-small {
+    position: absolute;
+    bottom: -15px; /* Ajusta a posição da imagem pequena */
+    left: -15px;
+}
+
+.photo-small img {
+    width: 70px; /* Tamanho da imagem pequena */
+    height: 70px;
+    border-radius: 30%; /* Imagem pequena arredondada */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid white;
+}
+
+/* Animação contínua */
+@keyframes scroll-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Estilo para a seção de logos */
+.brands-logo {
+    text-align: center;
+    margin: 50px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.brands-logo p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.brands-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    animation: scrollLogos 15s linear infinite;
+}
+
+.carousel-track img {
+    max-width: 50px;
+    margin: 0 20px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+    gap: 10rem;
+}
+
+.carousel-track img:hover {
+    opacity: 1;
+}
+
+/* Sombra de neblina nas laterais */
+.brands-carousel::before,
+.brands-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+    z-index: 2;
+}
+
+.brands-carousel::before {
+    left: 0;
+}
+
+.brands-carousel::after {
+    right: 0;
+    background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+}
+
+/* Animação contínua do carrossel */
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+/* Ajustes para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header-container h1 {
+        font-size: 3rem; /* Aumenta o tamanho da fonte para telas de tablet */
+    }
+
+    .header-container p {
+        font-size: 1.5rem;
+        margin-bottom: 25px; /* Ajuste de espaçamento para tablet */
+    }
+
+    .carousel-slide {
+        min-width: 280px; /* Slides ligeiramente menores em tablets */
+    }
+
+    .photo-large img {
+        width: 80%; /* Ajusta o tamanho das imagens para telas de tablet */
+    }
+
+    .photo-small img {
+        width: 60px;
+        height: 60px;
+    }
+
+    nav ul {
+        flex-direction: row; /* Exibe a barra de navegação horizontalmente em tablets */
+    }
+
+    nav ul li {
+        margin-right: 15px;
+    }
+}
+
+/* Mantém o ajuste para telas pequenas até 768px */
+@media (max-width: 768px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        font-family: Arial, sans-serif;
+        background-color: #fafafa;
+        width: 100%;
+        height: 100%;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #fff; /* Definir um fundo para tornar os itens visíveis */
+        position: absolute; /* Se precisar que apareça sobre outro conteúdo */
+        top: 50px; /* Ajuste conforme o posicionamento desejado */
+        width: 100%; /* Pode ajustar para caber na largura desejada */
+        z-index: 1000; /* Garante que o menu apareça acima de outros elementos */
+      }
+
+
+      nav ul li {
+        margin: 10px 0;
+        padding: 10px;
+        text-align: center;
+        background-color: #f9f9f9;
+        border-bottom: 1px solid #ddd;
+      }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #777;
+        display: block;
+    }
+
+    nav button {
+        margin: 0;
+        padding: 10px 20px;
+        background-color: #000;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+
+
+    .full-screen-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    nav ul li img {
+        height: 40px;
+        border-radius: 5px;
+        margin: 0;
+    }
+
+    @keyframes scroll-infinite {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-300%);
+        }
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    nav ul li {
+        margin-right: 20px;
+        align-items: center;
+        margin: 0 0rem;
+    }
+
+    .header-container {
+        text-align: center;
+        padding: 50px 20px;
+        width: 100%;
+    }
+
+    .header-container h1 {
+        margin: 20px 0;
+        font-size: 20px;
+        flex: none;
+        height: auto;
+        position: relative;
+        width: 100%;
+        font-family: Helvetica;
+    }
+
+    .header-container p {
+        margin-bottom: 30px;
+        font-size: 0.8rem;
+        align-items: center;
+        display: flex;
+        flex: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 12px;
+        height: min-content;
+        justify-content: center;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        width: 100%;
+        color: #777;
+    }
+
+    #gerador {
+        font-size: 1.3rem;
+        margin-bottom: 3rem;
+        background-color: #1d0707;
+        border-style: dotted;
+        width: 80%;
+        margin-left: 50px;
+        background: linear-gradient(90deg, #ff8a00, #040404);
+         -webkit-background-clip: text;
+         color: transparent;
+         text-transform: uppercase;
+         font-weight: bold;
+         letter-spacing: 4px;
+
+        }
+
+    .header-container button {
+        padding: 15px 30px;
+        font-size: 1em;
+        background-color: #000000;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .header-container button:hover {
+        background-color: rgba(0, 0, 0, 0.962);
+    }
+}

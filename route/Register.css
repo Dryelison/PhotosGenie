@@ -1,0 +1,259 @@
+/* Estilo geral */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  text-align: center;
+}
+
+/* Contêiner principal com fotos de fundo */
+.main-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura total da viewport */
+  width: 100vw; /* Largura total da viewport */
+  position: relative; /* Contêiner relativo para o posicionamento absoluto do fundo */
+  overflow: hidden;
+}
+
+/* Fotos de fundo */
+.photos-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Diminui o tamanho mínimo das células da grade */
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 5px; /* Reduz o espaçamento entre as imagens */
+  z-index: 1; /* Camada mais baixa para o fundo */
+}
+
+.photos-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px; /* Arredondamento leve para cada imagem */
+  margin: 10px;
+
+}
+
+/* Caixa de conteúdo centralizada */
+.content-box {
+  position: relative;
+  z-index: 2; /* Camada superior para o conteúdo principal */
+  background-color: rgba(255, 255, 255, 0.95); /* Fundo branco semi-transparente */
+  border-radius: 15px; /* Bordas arredondadas para o contêiner de conteúdo */
+  padding: 30px;
+  max-width: 800px; /* Limita a largura máxima da caixa de conteúdo */
+  width: 90%; /* Largura relativa à viewport para responsividade */
+  height: 700px ;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaçamento entre os elementos internos */
+}
+
+/* Estilos para o conteúdo principal com duas colunas */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* Espaçamento entre as colunas */
+}
+
+/* Colunas de conteúdo */
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
+.left-column {
+  text-align: left;
+}
+
+.right-column {
+  text-align: left;
+}
+
+/* Linha divisória vertical */
+.vertical-divider {
+  width: 1px;
+  background-color: #000000;
+  height: 100%;
+  align-self: stretch; /* Garante que a linha divisória cubra toda a altura do contêiner */
+}
+
+.main-content h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.main-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+
+
+.material-icons {
+  font-size: 20px; /* Ajusta o tamanho do ícone */
+}
+
+.form input {
+  width: 100%;
+  height: auto;
+}
+
+.form button {
+  width: 60%;
+  height: 40px;
+  margin-left: 80px;
+  font-size: 1.2rem;
+  border: #777;
+  border-radius: 10px;
+}
+
+.subscription {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.subscription a {
+  color: #4285F4;
+  text-decoration: none;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 100px 0;
+  font-size: 14px;
+  color: #333;
+  text-align: justify;
+}
+
+.benefits-list li {
+  margin-bottom: 5px;
+}
+
+.content-box .benefits-list li::before {
+  content: "\2713"; /* Código Unicode para o símbolo "✔" */
+  color: rgb(75, 172, 75); /* Cor do checkmark */
+  position: flex;
+  left: 10px;
+  top: 0;
+  font-size: 1.2em; /* Ajuste o tamanho conforme necessário */
+  line-height: 1.2;
+}
+
+.comments-section {
+  text-align: center;
+}
+
+.testimonial {
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.logos-title {
+  text-align: center;
+  margin-top: 122%;
+
+}
+
+.logos-title h4{
+  font-size: 1.5rem;
+  color: #4285F4;
+}
+
+.logos-title p {
+  margin: 1px;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+
+}
+
+.logos img {
+  max-width: 50px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column; /* Empilha as colunas em telas menores */
+    gap: 10px;
+  }
+
+  .vertical-divider {
+    display: none; /* Esconde a linha divisória em telas menores */
+  }
+
+  .content-box {
+    width: 100%;
+    height: auto; /* Ajusta a altura da caixa de conteúdo */
+    margin-right: 50px;
+    margin-left: 60px;
+  }
+
+  .main-content h2 {
+    font-size: 24px; /* Reduz o tamanho da fonte para telas menores */
+    text-align: center;
+  }
+
+  .main-content p {
+    font-size: 14px; /* Fonte menor para telas pequenas */
+  }
+
+  .form button {
+    width: 100%; /* Botão de formulário ocupa toda a largura */
+    margin-left: 0;
+  }
+
+  .benefits-list {
+    margin: 20px 0; /* Ajusta a margem para telas menores */
+    font-size: 12px; /* Fonte menor para benefícios */
+  }
+
+  .logos-title {
+    margin-top: 50px; /* Ajusta o espaçamento para telas menores */
+  }
+
+  .logos img {
+    max-width: 40px; /* Reduz o tamanho das logos */
+  }
+}
+
+/* Estilos para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-content h2 {
+    font-size: 26px; /* Tamanho de fonte intermediário para tablets */
+  }
+
+  .main-content p {
+    font-size: 15px;
+  }
+
+  .form button {
+    width: 80%; /* Ajusta a largura do botão */
+    margin-left: 10%;
+  }
+
+  .logos img {
+    max-width: 45px; /* Ajusta o tamanho das logos */
+  }
+}

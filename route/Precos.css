@@ -1,0 +1,147 @@
+/* Estilos para a seção de opções de planos */
+.plans-options {
+    text-align: center; /* Centraliza o texto e os botões */
+    padding: 20px 20px;
+    font-size: 30px;
+}
+
+.plans-options h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.5em;
+    margin-top: 1.8em;
+}
+
+.plans-options p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilos para o contêiner dos botões */
+.dual-button {
+    display: inline-flex;
+    border-radius: 30px;
+    overflow: hidden;
+
+}
+
+.btn-option {
+    flex: 1;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #f1f1f1;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.btn-option.individual {
+    border-right: 1px solid #ccc; /* Linha separadora entre os botões */
+}
+
+.btn-option.active {
+    background-color: #000000;
+    color: white;
+}
+
+.btn-option:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-option.active:hover {
+    background-color: #000000;
+}
+
+/* Estilos para a lista de planos */
+.plans-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-box {
+    border: 1px solid #e5dede;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.dolar {
+    font-size: 0.5em; /* Reduz o tamanho do símbolo do dólar */
+}
+
+.text-box .price {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.text-box hr {
+    width: 80%; /* Ajuste para controlar a largura da linha */
+    margin: 20px auto; /* Centraliza a linha dentro da caixa */
+    border: 0;
+    border-top: 1px solid #777; /* Espessura e cor da linha */
+}
+
+.text-box .features {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left; /* Alinha as opções à esquerda */
+}
+
+.text-box .features li {
+    margin-bottom: 10px;
+    padding-left: 25px; /* Espaço para o símbolo à esquerda */
+    position: relative;
+}
+
+.text-box .features li::before {
+    content: "\2713"; /* Código Unicode para o símbolo "✔" */
+    color: rgb(0, 0, 0); /* Cor do checkmark */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em; /* Ajuste o tamanho conforme necessário */
+    line-height: 1.2;
+}
+
+.text-box .btn {
+    display: inline-block;
+    color: #000000;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 89%;
+    text-align: center;
+}
+
+/* Estilos para o contêiner da garantia */
+.guarantee-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.guarantee img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

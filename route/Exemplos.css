@@ -1,0 +1,418 @@
+/* Estilos para a seção de exemplos */
+.exemplos {
+    text-align: justify;
+    width: 100%;
+    margin: 0 auto; /* Centraliza a seção na página */
+}
+
+.exemplos h2 {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.7em;
+}
+
+.exemplos p {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.0em;
+    color: #777;
+}
+
+/* Estilos para o contêiner da galeria */
+.gallery-container {
+    max-width: 900px;
+    height: 600px; /* Ajuste conforme a necessidade */
+    margin: 10px auto;
+    overflow: hidden;
+    position: relative;
+    margin-top: 2rem;
+}
+
+/* Estilos para a galeria */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    animation: scroll 30s linear infinite;
+    align-content: flex-start;
+    height: calc(200%); /* Suficiente para cobrir o conteúdo duplicado */
+}
+
+/* Estilos para os itens da galeria */
+.gallery-item {
+    width: calc(33.3% - 10px); /* Ajuste para 3 colunas, considerando algum espaço */
+    margin: 5px; /* Espaço entre as imagens */
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    width: 100%; /* Ajustado para ocupar toda a largura do item da galeria */
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Animação para a galeria */
+@keyframes scroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); } /* Apenas metade para garantir a repetição fluida */
+}
+
+/* Efeito de neblina nas bordas da galeria */
+.gallery-container::before, .gallery-container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    height: 80px; /* Ajuste a altura do efeito de neblina conforme desejado */
+}
+
+.gallery-container::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), transparent);
+}
+
+.gallery-container::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), transparent);
+}
+
+/* Estilos para a seção de comentários */
+.comment-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.comment-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    margin-top: 3rem;
+}
+
+.comment-section p {
+    font-size: 1.2em;
+    color: #666;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+/* Estilos para a lista de comentários */
+.comment-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+/* Estilos para cada comentário */
+.comment {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin: 0;
+    position: relative;
+}
+
+.comment-text {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+
+#tim {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 160px;
+    left: 20px;
+}
+
+#lynda {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 220px;
+    left: 18px;
+}
+
+#jeramy {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 110px;
+    left: 18px;
+}
+
+#brenda {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 110px;
+    left: 18px;
+}
+
+#joy{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 180px;
+    left: 18px;
+}
+
+#jacques {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+    left: 18px;
+}
+
+.comment-author {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 60px; /* Reserve espaço para a imagem */
+}
+
+.comment img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 180px;
+    left: 20px;
+}
+
+/* Estilos para dispositivos menores (como smartphones) */
+@media (max-width: 768px) {
+    .gallery-container {
+        height: 300px; /* Reduz a altura da galeria em telas menores */
+        max-width: 900px;
+        overflow: hidden;
+    }
+
+    .exemplos h2    {
+        margin-top: 0.5rem;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .exemplos p {
+        margin-top: 1.1rem;
+        text-align: center;
+        font-size: 1.4rem;
+        color: #777;
+    }
+    .gallery-container {
+        max-width: 900px;
+        height: 600px; /* Ajuste conforme a necessidade */
+        margin: 10px auto;
+        overflow: hidden;
+        position: relative;
+        margin-top: 2rem;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        animation: scroll-vertical 20s linear infinite;
+        align-content: flex-start;
+        height: calc(100%); /* Suficiente para cobrir o conteúdo duplicado */
+    }
+
+
+    .gallery-item {
+        width: calc(30% - 10px); /* Ajusta para 2 colunas em telas menores */
+        margin: 5px;
+    }
+
+
+    .comment-list {
+        grid-template-columns: 1fr; /* Exibe comentários em uma única coluna */
+        gap: 10px; /* Menor espaço entre os comentários */
+    }
+
+    .comment-section h2 {
+        font-size: 2rem; /* Reduz o tamanho da fonte */
+    }
+
+    .comment-section p {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+    }
+    #tim {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 110px;
+        left: 20px;
+    }
+
+    #lynda {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 170px;
+        left: 18px;
+    }
+
+    #jeramy {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 75px;
+        left: 18px;
+    }
+
+    #brenda {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 75px;
+        left: 18px;
+    }
+
+    #joy{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 130px;
+        left: 18px;
+    }
+
+    #jacques {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 150px;
+        left: 18px;
+    }
+
+    .comment {
+        padding: 15px;
+    }
+
+    .comment-author {
+        margin-left: 50px;
+    }
+
+    .comment img {
+        top: 150px;
+        left: 10px;
+    }
+}
+
+/* Estilos para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .gallery-container {
+        height: 500px;
+    }
+
+    .gallery-item {
+        width: calc(33.3% - 10px); /* Mantém 3 colunas, mas com ajuste de espaçamento */
+    }
+
+    .comment-list {
+        grid-template-columns: 1fr 1fr; /* Ajusta para 2 colunas em tablets */
+    }
+
+    .comment-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .comment-section p {
+        font-size: 1.1rem;
+    }
+
+    .comment {
+        padding: 20px;
+    }
+
+    .comment-author {
+        margin-left: 60px;
+    }
+
+    .comment img {
+        top: 160px;
+        left: 15px;
+    }
+    #tim {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 123px;
+        left: 20px;
+    }
+
+    #lynda {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 180px;
+        left: 18px;
+    }
+
+    #jeramy {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 85px;
+        left: 25px;
+    }
+
+    #brenda {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 85px;
+        left: 18px;
+    }
+
+    #joy{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 145px;
+        left: 18px;
+    }
+
+    #jacques {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 165px;
+        left: 18px;
+    }
+}
